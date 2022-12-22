@@ -4,8 +4,6 @@ import { useState, useEffect, useRef } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import { Snack, getSupportedSDKVersions, SDKVersion } from 'snack-sdk';
 import Head from 'next/head';
-
-import createWorkerTransport from '../components/transports/createWorkerTransport';
 import defaults from '../components/Defaults';
 
 const INITIAL_CODE_CHANGES_DELAY = 500;
@@ -25,7 +23,6 @@ export default function Home() {
         // Optionally you can run the transports inside a web-worker.
         // Encoding data messages for large apps might take several milliseconds
         // and can cause stutter when executed often.
-        ...(USE_WORKERS ? { createTransport: createWorkerTransport } : {}),
       })
   );
   const [snackState, setSnackState] = useState(snack.getState());
