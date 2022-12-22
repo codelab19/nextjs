@@ -6,8 +6,6 @@ import { Snack, getSupportedSDKVersions, SDKVersion } from 'snack-sdk';
 import Head from 'next/head';
 
 import createWorkerTransport from '../components/transports/createWorkerTransport';
-import { Button } from '../components/Button';
-import { Toolbar } from '../components/Toolbar';
 import defaults from '../components/Defaults';
 
 const INITIAL_CODE_CHANGES_DELAY = 500;
