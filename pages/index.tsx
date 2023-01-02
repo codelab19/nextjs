@@ -5,6 +5,7 @@ import { StyleSheet, css } from 'aphrodite';
 import { Snack, getSupportedSDKVersions, SDKVersion } from 'snack-sdk';
 import Head from 'next/head';
 import defaults from '../components/Defaults';
+import { webPlayerURL } from 'snack-sdk/build/defaultConfig';
 
 const INITIAL_CODE_CHANGES_DELAY = 500;
 const VERBOSE = !!process.browser;
@@ -65,9 +66,10 @@ export default function Home() {
             src={isClientReady ? webPreviewURL : undefined}
             allow="geolocation; camera; microphone"
           />
+    
   );
 }
-
+console.log(webPlayerURL)
 const sharedStyles = {
   pane: {
     border: '1px solid #DDDDE1',
